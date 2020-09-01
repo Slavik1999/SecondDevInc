@@ -9,12 +9,12 @@ let banners = document.querySelectorAll(".works__banner");
 let bannersArr = [];
 let pop = document.querySelector(".works__pop-up");
 let imagesArr = [
-  "../img/banner3.svg",
-  "../img/5.svg",
-  "../img/6.svg",
-  "../img/work4.svg",
-  "../img/9.svg",
-  "../img/10.svg",
+  "img/banner3.svg",
+  "img/5.svg",
+  "img/6.svg",
+  "img/work4.svg",
+  "img/9.svg",
+  "img/10.svg",
 ];
 
 function initMap() {
