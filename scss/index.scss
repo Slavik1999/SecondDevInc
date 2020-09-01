@@ -1,0 +1,598 @@
+$bgColorHeader: #eff0f2;
+$bgColorAboutUs: #f8fafa;
+$bgColorTeamFooter: #f9fbfb;
+$bgColorFooterBottom: #262b2e;
+$fontFamiliesTitlesButtons: Montserrat;
+$fontFamiliesUnderTitles: Merriweather;
+$fontFamiliesText: Raleway;
+%headerTitle {
+  height: 33px;
+  text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
+  color: #505050;
+  font-family: $fontFamiliesTitlesButtons;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+}
+%blocksTitles {
+  opacity: 0.9;
+  color: #000000;
+  font-family: $fontFamiliesTitlesButtons;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2.28px;
+}
+%textUnderBocksTitles {
+  opacity: 0.62;
+  color: #000000;
+  font-family: $fontFamiliesUnderTitles;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.08px;
+  margin-top: 10px;
+}
+@mixin buttonsText($op) {
+  opacity: $op;
+  color: #000000;
+  font-family: $fontFamiliesTitlesButtons;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  /* Text style for "CONTACT US" */
+  letter-spacing: 1.8px;
+}
+body {
+  min-width: 1160px;
+}
+.header {
+  width: 100%;
+  height: 926px;
+  background-color: $bgColorHeader;
+  opacity: 0.99;
+  padding-top: 65px;
+  &__logo-container {
+    width: 1110px;
+    margin: 0 auto;
+  }
+  &__rectangle-logo {
+    width: 113px;
+    height: 46px;
+    border: 6px solid #170f1c;
+    display: flex;
+    justify-content: center;
+  }
+  &__text-logo {
+    width: 85px;
+    height: 16px;
+    text-shadow: 0 0 2px rgba(21, 21, 22, 0.75);
+    color: #000000;
+    font-family: $fontFamiliesTitlesButtons;
+    font-size: 17px;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.02px;
+    margin-top: 4px;
+    .text-logo__o {
+      color: #77efe5;
+      font-size: 21px;
+      letter-spacing: 1.26px;
+    }
+  }
+  &__contact-us {
+    width: 1026px;
+    height: 372px;
+    margin: 206px auto 0 auto;
+  }
+  &__text-container {
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__firstRow {
+    @extend %headerTitle;
+  }
+  &__secondRow {
+    @extend %headerTitle;
+    margin-top: 30px;
+  }
+  &__shopno {
+    padding: 0 8px;
+    margin-left: -11px;
+    height: 54px;
+    background-color: rgba(118, 244, 234, 0.5);
+  }
+  &__agency {
+    padding: 0 8px;
+    margin-right: -11px;
+    width: 236px;
+    height: 54px;
+    background-color: rgba(118, 244, 234, 0.5);
+  }
+  &__button-container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    width: 232px;
+    height: 53px;
+    border-radius: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    @include buttonsText(0.75);
+    transition: 0.4s;
+  }
+  &__button:hover {
+    background-color: rgba(118, 244, 234, 1);
+    color: #fff;
+    transition: 0.4s;
+  }
+
+  &__img-container {
+    float: right;
+    margin-top: -20px;
+    margin-right: 10px;
+  }
+  & img {
+    width: 82px;
+    height: 92px;
+    background-color: #eff0f2;
+  }
+}
+.about-us {
+  height: 985px;
+  background-color: $bgColorAboutUs;
+  padding-top: 129px;
+  &__title-container {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &__title {
+    @extend %blocksTitles;
+  }
+  &__under-title {
+    @extend %textUnderBocksTitles;
+  }
+  &__content-container {
+    width: 1022px;
+    height: 483px;
+    margin: 140px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image {
+    width: 392px;
+    height: 483px;
+  }
+  &__text-container {
+    width: 476px;
+    height: 414px;
+  }
+  &__content-title-first {
+    width: 406px;
+    height: 17px;
+    opacity: 0.75;
+    color: #000000;
+    font-family: $fontFamiliesUnderTitles;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+  }
+  &__content-title-second {
+    width: 254px;
+    height: 17px;
+    opacity: 0.75;
+    color: #000000;
+    font-family: $fontFamiliesUnderTitles;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    letter-spacing: 1.02px;
+    margin-top: 38px;
+  }
+  &__content-text-first {
+    width: 474px;
+    height: 212px;
+    opacity: 0.74;
+    color: #000000;
+    font-family: $fontFamiliesText;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+    letter-spacing: 0.8px;
+    margin-top: 31px;
+  }
+  &__content-text-second {
+    width: 469px;
+    height: 72px;
+    opacity: 0.74;
+    color: #000000;
+    font-family: $fontFamiliesText;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+    letter-spacing: 0.8px;
+    margin-top: 27px;
+  }
+}
+.works {
+  width: 1139px;
+  // height: 912px;
+  padding-top: 129px;
+  margin: 0 auto;
+
+  &__title-container {
+    height: 59px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    @extend %blocksTitles;
+  }
+  &__under-title {
+    @extend %textUnderBocksTitles;
+  }
+  &__images {
+    width: 1139px;
+    height: 731px;
+    margin-top: 127px;
+    margin-bottom: 125px;
+    position: relative;
+  }
+  &__row {
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__banner {
+    width: 370px;
+    height: 359px;
+  }
+  &__pop-up {
+    position: absolute;
+    width: 1139px;
+    height: 731px;
+    top: 0px;
+    left: 0px;
+    display: none;
+  }
+}
+.team {
+  width: 100%;
+  background-color: $bgColorTeamFooter;
+  padding-top: 99px;
+
+  &__title-container {
+    height: 57px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 125px;
+  }
+  &__title {
+    @extend %blocksTitles;
+  }
+  &__under-title {
+    @extend %textUnderBocksTitles;
+  }
+  &__images {
+    width: 1141px;
+    height: 894px;
+    margin: 0 auto;
+  }
+  &__row {
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__person {
+    width: 370px;
+    height: 440px;
+  }
+  &__person.girlFirst {
+    background-image: url("../img/team_3.png");
+  }
+  &__person.nigga {
+    background-image: url("../img/team_4.png");
+  }
+  &__person.manFirst {
+    background-image: url("../img/team_1.png");
+  }
+  &__person.girlSecond {
+    width: 370px;
+    height: 440px;
+    background-image: url("../img/3.png");
+  }
+  &__person.manSecond {
+    background-image: url("../img/team_2.png");
+  }
+
+  &__person.girlThird {
+    background-image: url("../img/team_3.png");
+  }
+  &__letter {
+    width: 335px;
+    height: 260px;
+    position: relative;
+    top: 140px;
+    left: 18px;
+    display: none;
+  }
+  &__letter.active {
+    width: 335px;
+    height: 260px;
+    position: relative;
+    top: 140px;
+    left: 18px;
+    display: block;
+  }
+
+  &__triangle {
+    width: 42px;
+    height: 37px;
+    opacity: 0.97;
+    margin-bottom: -20px;
+    border: 22px solid transparent;
+    border-bottom: 33px solid #71f6ec;
+  }
+  &__rectangle {
+    width: 335px;
+    height: 241px;
+    box-shadow: 3px 6px 16px rgba(20, 20, 21, 0.18);
+    background-color: #6df6eb;
+    opacity: 0.98;
+    padding-top: 43px;
+    .rectangle-title {
+      width: 243px;
+      height: 19px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #272727;
+      font-family: $fontFamiliesUnderTitles;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-left: 38px;
+      .title-ui {
+        width: 243px;
+        height: 19px;
+        opacity: 0.95;
+        color: #767070;
+        font-family: $fontFamiliesUnderTitles;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        font-family: $fontFamiliesUnderTitles;
+        font-weight: 400;
+        letter-spacing: 0.45px;
+      }
+    }
+    .rectangle-text {
+      /* Style for "Lorem Ipsu" */
+      width: 239px;
+      height: 64px;
+      opacity: 0.8;
+      color: #000000;
+      font-family: $fontFamiliesText;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      /* Text style for "Lorem Ipsu" */
+      letter-spacing: 0.16px;
+      margin-top: 23px;
+      margin-left: 38px;
+    }
+    .rectangle-icons {
+      width: 88px;
+      height: 13px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 37px;
+      margin-left: 39px;
+    }
+    .fa {
+      /* Style for "" */
+      width: 15px;
+      height: 11px;
+      opacity: 0.7;
+      color: #000000;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 21.57px;
+      /* Text style for "" */
+      letter-spacing: 0.15px;
+      transition: 0.5s;
+    }
+    .fa:hover {
+      cursor: pointer;
+      color: #797676;
+      transition: 0.5s;
+    }
+  }
+}
+.footer {
+  height: 1020px;
+  background-color: $bgColorTeamFooter;
+  padding-top: -251px;
+  position: relative;
+
+  &__top {
+    height: 916px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  &__contact-container {
+    width: 1140px;
+    height: 461px;
+    top: 308px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__location {
+    width: 500px;
+    height: 461px;
+    box-shadow: 0 0 3px rgba(21, 21, 21, 0.16);
+    background-color: rgba(2, 22, 35, 0.71);
+    padding-top: 31px;
+  }
+  &__addres {
+    width: 213px;
+    height: 159px;
+    opacity: 0.6;
+    color: #ffffff;
+    font-family: $fontFamiliesText;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 30px;
+  }
+  &__map {
+    width: 455px;
+    height: 224px;
+    background-color: grey;
+    margin-top: 30px;
+    margin-left: 22px;
+  }
+  &__form {
+    width: 614px;
+    height: 460px;
+    box-shadow: 0 0 30px rgba(21, 21, 21, 0.12);
+    background-color: rgba(2, 22, 35);
+    opacity: 0.71;
+    padding-left: 31px;
+    padding-top: 18px;
+    input {
+      height: 35px;
+      padding: 8px 9px 17px 4px;
+      margin-top: 23px;
+    }
+    textarea {
+      min-height: 87px;
+      padding: 0px 9px 17px 4px;
+      margin-top: 10px;
+    }
+    input,
+    textarea {
+      width: 550px;
+      background-color: inherit;
+      border: none;
+      border-radius: 0px;
+      outline: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      opacity: 1;
+      color: #ffffff;
+      font-family: $fontFamiliesText;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 51px;
+    }
+    input:focus,
+    textarea:focus {
+      color: #ffffff;
+      background-color: inherit;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      outline: none;
+    }
+    button {
+      width: 244px;
+      height: 53px;
+      border-radius: 2px;
+      background-color: rgb(110, 238, 228);
+      margin-top: 38px;
+      @include buttonsText(1);
+    }
+    button:hover {
+      background-color: rgb(96, 192, 184);
+      color: #f9fbfb;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    height: 316px;
+    background-color: $bgColorFooterBottom;
+  }
+  &__social {
+    width: 205px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 87px;
+  }
+  &__title {
+    height: 12px;
+    opacity: 0.8;
+    color: #ffffff;
+    font-family: $fontFamiliesText;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.16px;
+  }
+  &__icons {
+    width: 205px;
+    height: 41px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__fa-container.active {
+    background-color: #71f6eb;
+    .active {
+      opacity: 0.95;
+      color: #000000;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  &__fa-container.active:hover {
+    background-color: #65ccc3;
+  }
+  &__fa-container {
+    width: 46px;
+    height: 40px;
+    background-color: rgb(141, 141, 141, 0.34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    .fa {
+      color: #faf4f4;
+      opacity: 0.6;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  &__fa-container:hover {
+    background-color: rgba(226, 226, 226, 0.34);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
