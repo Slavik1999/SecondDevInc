@@ -48,9 +48,7 @@ $fontFamiliesText: Raleway;
 	/* Text style for "CONTACT US" */
 	letter-spacing: 1.8px;
 }
-body {
-	min-width: 1160px;
-}
+
 .header {
 	width: 100%;
 	height: 926px;
@@ -58,7 +56,7 @@ body {
 	opacity: 0.99;
 	padding-top: 65px;
 	&__logo-container {
-		width: 1110px;
+		width: 90%;
 		margin: 0 auto;
 	}
 	&__rectangle-logo {
@@ -89,7 +87,8 @@ body {
 		}
 	}
 	&__contact-us {
-		width: 1026px;
+		width: 80%;
+		min-width: 1000px;
 		height: 372px;
 		margin: 206px auto 0 auto;
 	}
@@ -151,9 +150,9 @@ body {
 	}
 }
 .about-us {
-	height: 985px;
 	background-color: $bgColorAboutUs;
-	padding-top: 129px;
+	padding-top: 10%;
+	padding-bottom: 10%;
 	&__title-container {
 		height: 60px;
 		display: flex;
@@ -169,7 +168,9 @@ body {
 		@extend %textUnderBocksTitles;
 	}
 	&__content-container {
-		width: 1022px;
+		width: 68%;
+		min-width: 890px;
+		max-width: 1139px;
 		height: 483px;
 		margin: 140px auto 0 auto;
 		display: flex;
@@ -238,10 +239,12 @@ body {
 	}
 }
 .works {
-	width: 1139px;
-	// height: 912px;
-	padding-top: 129px;
-	margin: 0 auto;
+	padding-top: 10%;
+	padding-bottom: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
 	&__title-container {
 		height: 59px;
@@ -258,23 +261,26 @@ body {
 		@extend %textUnderBocksTitles;
 	}
 	&__images {
-		width: 1139px;
+		width: 100%;
+		max-width: 1139px;
 		height: 731px;
 		margin-top: 127px;
 		margin-bottom: 125px;
 		position: relative;
 	}
 	&__row {
+		width: 100%;
 		margin-top: 13px;
 		display: flex;
 		justify-content: space-between;
 		button {
+			padding: 0;
+			margin: 0;
 			background-color: #fff;
 			outline: none;
 			border: none;
 			&:focus {
 				outline: none;
-				border: none;
 			}
 		}
 	}
@@ -310,7 +316,11 @@ body {
 .team {
 	width: 100%;
 	background-color: $bgColorTeamFooter;
-	padding-top: 99px;
+	padding-top: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
 	&__title-container {
 		height: 57px;
@@ -328,11 +338,16 @@ body {
 		@extend %textUnderBocksTitles;
 	}
 	&__images {
-		width: 1141px;
+		width: 95%;
+		max-width: 1138px;
+		min-width: 1120px;
+		display: flex;
+		justify-content: center;
 		height: 894px;
-		margin: 0 auto;
+		flex-wrap: wrap;
 	}
 	&__row {
+		width: 100%;
 		margin-top: 13px;
 		display: flex;
 		justify-content: space-between;
@@ -442,19 +457,18 @@ body {
 	}
 }
 .footer {
-	height: 1020px;
 	background-color: $bgColorTeamFooter;
-	padding-top: -251px;
 	position: relative;
 
 	&__top {
-		height: 916px;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
 	}
 	&__contact-container {
-		width: 1140px;
+		width: 88%;
+		max-width: 1140px;
+		min-width: 1120px;
 		height: 461px;
 		top: 308px;
 		position: absolute;
