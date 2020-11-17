@@ -5,20 +5,42 @@ $bgColorFooterBottom: #262b2e;
 $fontFamiliesTitlesButtons: Montserrat;
 $fontFamiliesUnderTitles: Merriweather;
 $fontFamiliesText: Raleway;
+$borderLogo: #170f1c;
+$blackColor: #000000;
+$whiteColor: #ffffff;
+$logoOColor: #77efe5;
+$bckgHeaderTextColor: rgba(118, 244, 234, 0.5);
+$modalBckgColor: rgb(68, 65, 65);
+$headerTextShadowColor: rgba(21, 21, 22, 0.75);
+$headerButtonBorder: rgba(0, 0, 0, 0.5);
+$btnBckgHoverColor: rgba(118, 244, 234, 1);
+$shadowTeamAboutBox: rgba(20, 20, 21, 0.18);
+$bckgTeamAboutBox: #6df6eb;
+$teamPersonNameColor: #272727;
+$teamPersonProfessionColor: #767070;
+$footerSocialBckg: rgba(141, 141, 141, 0.34);
+$footerSocialBckgHover: rgba(226, 226, 226, 0.34);
+$footerSocialBckgActive: #71f6eb;
+$footerSocialBckgActiveHover: #65ccc3;
+$footerFormButtonBckg: rgb(110, 238, 228);
+$footerFormButtonBckgHover: rgb(96, 192, 184);
+$footerFormButtonBckgHoverText: #f9fbfb;
+$footerFormInputBorder: rgba(255, 255, 255, 0.4);
+$footerFormInputBorderFocus: rgba(255, 255, 255, 0.6);
 %headerTitle {
-	height: 33px;
 	text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
 	color: #505050;
 	font-family: $fontFamiliesTitlesButtons;
 	font-size: 45px;
 	font-weight: 700;
-	line-height: 28px;
+	line-height: 50px;
 	text-transform: uppercase;
 	letter-spacing: 2.7px;
+	text-align: center;
 }
 %blocksTitles {
 	opacity: 0.9;
-	color: #000000;
+	color: $blackColor;
 	font-family: $fontFamiliesTitlesButtons;
 	font-size: 38px;
 	font-weight: 700;
@@ -28,7 +50,7 @@ $fontFamiliesText: Raleway;
 }
 %textUnderBocksTitles {
 	opacity: 0.62;
-	color: #000000;
+	color: $blackColor;
 	font-family: $fontFamiliesUnderTitles;
 	font-size: 18px;
 	font-weight: 400;
@@ -36,10 +58,11 @@ $fontFamiliesText: Raleway;
 	text-transform: uppercase;
 	letter-spacing: 1.08px;
 	margin-top: 10px;
+	text-align: center;
 }
 @mixin buttonsText($op) {
 	opacity: $op;
-	color: #000000;
+	color: $blackColor;
 	font-family: $fontFamiliesTitlesButtons;
 	font-size: 18px;
 	font-weight: 400;
@@ -51,8 +74,9 @@ $fontFamiliesText: Raleway;
 
 .header {
 	width: 100%;
-	height: 926px;
+	min-width: 500px;
 	background-color: $bgColorHeader;
+	padding-bottom: 200px;
 	opacity: 0.99;
 	padding-top: 65px;
 	&__logo-container {
@@ -62,7 +86,7 @@ $fontFamiliesText: Raleway;
 	&__rectangle-logo {
 		width: 113px;
 		height: 46px;
-		border: 6px solid #170f1c;
+		border: 6px solid $borderLogo;
 		display: flex;
 		justify-content: center;
 		&:hover {
@@ -72,8 +96,8 @@ $fontFamiliesText: Raleway;
 	&__text-logo {
 		width: 85px;
 		height: 16px;
-		text-shadow: 0 0 2px rgba(21, 21, 22, 0.75);
-		color: #000000;
+		text-shadow: 0 0 2px $headerTextShadowColor;
+		color: $blackColor;
 		font-family: $fontFamiliesTitlesButtons;
 		font-size: 17px;
 		line-height: 28px;
@@ -81,43 +105,34 @@ $fontFamiliesText: Raleway;
 		letter-spacing: 1.02px;
 		margin-top: 4px;
 		.text-logo__o {
-			color: #77efe5;
+			color: $logoOColor;
 			font-size: 21px;
 			letter-spacing: 1.26px;
 		}
 	}
 	&__contact-us {
 		width: 80%;
-		min-width: 1000px;
-		height: 372px;
 		margin: 206px auto 0 auto;
-	}
-	&__text-container {
-		height: 113px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 	}
 	&__firstRow {
 		@extend %headerTitle;
+		margin-bottom: 10px;
 	}
 	&__secondRow {
 		@extend %headerTitle;
-		margin-top: 30px;
 	}
 	&__shopno {
 		padding: 0 8px;
 		margin-left: -11px;
 		height: 54px;
-		background-color: rgba(118, 244, 234, 0.5);
+		background-color: $bckgHeaderTextColor;
 	}
 	&__agency {
 		padding: 0 8px;
 		margin-right: -11px;
 		width: 236px;
 		height: 54px;
-		background-color: rgba(118, 244, 234, 0.5);
+		background-color: $bckgHeaderTextColor;
 	}
 	&__button-container {
 		margin-top: 150px;
@@ -128,37 +143,33 @@ $fontFamiliesText: Raleway;
 		width: 232px;
 		height: 53px;
 		border-radius: 2px;
-		border: 2px solid rgba(0, 0, 0, 0.5);
+		border: 2px solid $headerButtonBorder;
 		@include buttonsText(0.75);
 		transition: 0.4s;
 	}
 	&__button:hover {
-		background-color: rgba(118, 244, 234, 1);
-		color: #fff;
+		background-color: $btnBckgHoverColor;
+		color: $whiteColor;
 		transition: 0.4s;
 	}
 
 	&__img-container {
 		float: right;
 		margin-top: -20px;
-		margin-right: 10px;
 	}
 	& img {
 		width: 82px;
 		height: 92px;
-		background-color: #eff0f2;
+		background-color: $bgColorHeader;
 	}
 }
 .about-us {
 	background-color: $bgColorAboutUs;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 100px;
+	padding-bottom: 150px;
+	height: auto;
 	&__title-container {
-		height: 60px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		text-align: center;
 		margin: 0 auto;
 	}
 	&__title {
@@ -168,27 +179,31 @@ $fontFamiliesText: Raleway;
 		@extend %textUnderBocksTitles;
 	}
 	&__content-container {
-		width: 68%;
-		min-width: 890px;
+		width: 75%;
 		max-width: 1139px;
-		height: 483px;
 		margin: 140px auto 0 auto;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		@media screen and (max-width: 1069px) {
+			justify-content: center;
+		}
 	}
 	&__image {
 		width: 392px;
 		height: 483px;
+		padding-right: 10px;
 	}
 	&__text-container {
-		width: 476px;
-		height: 414px;
+		width: 50%;
+		margin-top: 10px;
+		@media screen and (max-width: 1069px) {
+			width: 392px;
+		}
 	}
 	&__content-title-first {
-		width: 406px;
-		height: 17px;
 		opacity: 0.75;
-		color: #000000;
+		color: $blackColor;
 		font-family: $fontFamiliesUnderTitles;
 		font-size: 20px;
 		font-weight: bold;
@@ -198,10 +213,8 @@ $fontFamiliesText: Raleway;
 		letter-spacing: 1.2px;
 	}
 	&__content-title-second {
-		width: 254px;
-		height: 17px;
 		opacity: 0.75;
-		color: #000000;
+		color: $blackColor;
 		font-family: $fontFamiliesUnderTitles;
 		font-size: 17px;
 		font-weight: 700;
@@ -212,10 +225,8 @@ $fontFamiliesText: Raleway;
 		margin-top: 38px;
 	}
 	&__content-text-first {
-		width: 474px;
-		height: 212px;
 		opacity: 0.74;
-		color: #000000;
+		color: $blackColor;
 		font-family: $fontFamiliesText;
 		font-size: 16px;
 		font-weight: 400;
@@ -225,10 +236,9 @@ $fontFamiliesText: Raleway;
 		margin-top: 31px;
 	}
 	&__content-text-second {
-		width: 469px;
 		height: 72px;
 		opacity: 0.74;
-		color: #000000;
+		color: $blackColor;
 		font-family: $fontFamiliesText;
 		font-size: 16px;
 		font-weight: 400;
@@ -239,20 +249,18 @@ $fontFamiliesText: Raleway;
 	}
 }
 .works {
-	padding-top: 10%;
-	padding-bottom: 5%;
+	padding-top: 150px;
+	padding-bottom: 100px;
 	display: flex;
+	flex-wrap: wrap;
+
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 
 	&__title-container {
-		height: 59px;
 		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		text-align: center;
 	}
 	&__title {
 		@extend %blocksTitles;
@@ -263,20 +271,23 @@ $fontFamiliesText: Raleway;
 	&__images {
 		width: 100%;
 		max-width: 1139px;
-		height: 731px;
 		margin-top: 127px;
 		margin-bottom: 125px;
-		position: relative;
 	}
 	&__row {
 		width: 100%;
-		margin-top: 13px;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+
+		@media screen and (max-width: 1145px) {
+			justify-content: center;
+		}
+
 		button {
 			padding: 0;
 			margin: 0;
-			background-color: #fff;
+			background-color: $whiteColor;
 			outline: none;
 			border: none;
 			&:focus {
@@ -287,6 +298,10 @@ $fontFamiliesText: Raleway;
 	&__banner {
 		width: 370px;
 		height: 359px;
+		margin-top: 13px;
+		@media screen and (max-width: 1145px) {
+			margin-right: 13px;
+		}
 	}
 	&__pop-up {
 		position: absolute;
@@ -299,7 +314,7 @@ $fontFamiliesText: Raleway;
 }
 .modal-content {
 	.modal-body {
-		background-color: rgb(68, 65, 65);
+		background-color: $modalBckgColor;
 		border: none;
 		padding: 0 !important;
 		img {
@@ -323,12 +338,8 @@ $fontFamiliesText: Raleway;
 	flex-direction: column;
 
 	&__title-container {
-		height: 57px;
 		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		text-align: center;
 		margin-bottom: 125px;
 	}
 	&__title {
@@ -340,21 +351,26 @@ $fontFamiliesText: Raleway;
 	&__images {
 		width: 95%;
 		max-width: 1138px;
-		min-width: 1120px;
 		display: flex;
 		justify-content: center;
-		height: 894px;
 		flex-wrap: wrap;
 	}
 	&__row {
 		width: 100%;
-		margin-top: 13px;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		@media screen and (max-width: 1200px) {
+			justify-content: center;
+		}
 	}
 	&__person {
 		width: 370px;
 		height: 440px;
+		margin-top: 13px;
+		@media screen and (max-width: 1200px) {
+			margin-right: 13px;
+		}
 		&:hover {
 			.team__letter {
 				top: 140px;
@@ -379,13 +395,13 @@ $fontFamiliesText: Raleway;
 		opacity: 0.97;
 		margin-bottom: -20px;
 		border: 22px solid transparent;
-		border-bottom: 33px solid #71f6ec;
+		border-bottom: 33px solid $bckgTeamAboutBox;
 	}
 	&__rectangle {
 		width: 335px;
 		height: 241px;
-		box-shadow: 3px 6px 16px rgba(20, 20, 21, 0.18);
-		background-color: #6df6eb;
+		box-shadow: 3px 6px 16px $shadowTeamAboutBox;
+		background-color: $bckgTeamAboutBox;
 		opacity: 0.98;
 		padding-top: 43px;
 		.rectangle-title {
@@ -393,7 +409,7 @@ $fontFamiliesText: Raleway;
 			height: 19px;
 			font-size: 15px;
 			line-height: 24px;
-			color: #272727;
+			color: $teamPersonNameColor;
 			font-family: $fontFamiliesUnderTitles;
 			font-size: 20px;
 			font-weight: bold;
@@ -403,7 +419,7 @@ $fontFamiliesText: Raleway;
 				width: 243px;
 				height: 19px;
 				opacity: 0.95;
-				color: #767070;
+				color: $teamPersonProfessionColor;
 				font-family: $fontFamiliesUnderTitles;
 				font-size: 15px;
 				font-weight: 400;
@@ -418,7 +434,7 @@ $fontFamiliesText: Raleway;
 			width: 239px;
 			height: 64px;
 			opacity: 0.8;
-			color: #000000;
+			color: $blackColor;
 			font-family: $fontFamiliesText;
 			font-size: 16px;
 			font-weight: 400;
@@ -441,7 +457,7 @@ $fontFamiliesText: Raleway;
 			width: 15px;
 			height: 11px;
 			opacity: 0.7;
-			color: #000000;
+			color: $blackColor;
 			font-size: 13px;
 			font-weight: 400;
 			line-height: 21.57px;
@@ -451,7 +467,7 @@ $fontFamiliesText: Raleway;
 		}
 		.fa:hover {
 			cursor: pointer;
-			color: #797676;
+			color: $teamPersonProfessionColor;
 			transition: 0.5s;
 		}
 	}
@@ -468,25 +484,32 @@ $fontFamiliesText: Raleway;
 	&__contact-container {
 		width: 88%;
 		max-width: 1140px;
-		min-width: 1120px;
-		height: 461px;
 		top: 308px;
 		position: absolute;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		@media screen and (max-width: 759.5px) {
+			top: 100px;
+			justify-content: center;
+		}
 	}
 	&__location {
-		width: 500px;
-		height: 461px;
-		box-shadow: 0 0 3px rgba(21, 21, 21, 0.16);
+		width: 40%;
+		min-width: 300px;
 		background-color: rgba(2, 22, 35, 0.71);
 		padding-top: 31px;
+		@media screen and (max-width: 759.5px) {
+			min-width: 400px;
+			padding-top: 10px;
+			margin-top: 5px;
+		}
 	}
 	&__addres {
 		width: 213px;
 		height: 159px;
 		opacity: 0.6;
-		color: #ffffff;
+		color: $whiteColor;
 		font-family: $fontFamiliesText;
 		font-size: 15px;
 		font-weight: 400;
@@ -495,7 +518,7 @@ $fontFamiliesText: Raleway;
 		a {
 			display: inline-block;
 			opacity: 1;
-			color: #ffffff;
+			color: $whiteColor;
 			font-family: $fontFamiliesText;
 			font-weight: 400;
 			&:hover {
@@ -505,24 +528,29 @@ $fontFamiliesText: Raleway;
 		}
 	}
 	&__map {
-		width: 455px;
+		width: 90%;
 		height: 224px;
 		background-color: grey;
 		margin-top: 30px;
 		margin-left: 22px;
+		margin-bottom: 10px;
 	}
 	&__form {
-		width: 614px;
+		width: 54%;
+		min-width: 300px;
 		height: 460px;
-		box-shadow: 0 0 30px rgba(21, 21, 21, 0.12);
 		background-color: rgba(2, 22, 35);
 		opacity: 0.71;
 		padding-left: 31px;
 		padding-top: 18px;
+		@media screen and (max-width: 759.5px) {
+			min-width: 400px;
+			height: 415px;
+		}
 		input {
 			height: 35px;
 			padding: 8px 9px 17px 4px;
-			margin-top: 23px;
+			margin-top: 20px;
 		}
 		textarea {
 			min-height: 87px;
@@ -531,14 +559,14 @@ $fontFamiliesText: Raleway;
 		}
 		input,
 		textarea {
-			width: 550px;
+			width: 90%;
 			background-color: inherit;
 			border: none;
 			border-radius: 0px;
 			outline: 0;
-			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+			border-bottom: 1px solid $footerFormInputBorder;
 			opacity: 1;
-			color: #ffffff;
+			color: $whiteColor;
 			font-family: $fontFamiliesText;
 			font-size: 15px;
 			font-weight: 400;
@@ -546,22 +574,22 @@ $fontFamiliesText: Raleway;
 		}
 		input:focus,
 		textarea:focus {
-			color: #ffffff;
+			color: $whiteColor;
 			background-color: inherit;
-			border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+			border-bottom: 1px solid $footerFormInputBorderFocus;
 			outline: none;
 		}
 		button {
 			width: 244px;
 			height: 53px;
 			border-radius: 2px;
-			background-color: rgb(110, 238, 228);
+			background-color: $footerFormButtonBckg;
 			margin-top: 38px;
 			@include buttonsText(1);
 		}
 		button:hover {
-			background-color: rgb(96, 192, 184);
-			color: #f9fbfb;
+			background-color: $footerFormButtonBckgHover;
+			color: $footerFormButtonBckgHoverText;
 		}
 	}
 	&__bottom {
@@ -580,7 +608,7 @@ $fontFamiliesText: Raleway;
 	&__title {
 		height: 12px;
 		opacity: 0.8;
-		color: #ffffff;
+		color: $whiteColor;
 		font-family: $fontFamiliesText;
 		font-size: 16px;
 		font-weight: 400;
@@ -596,21 +624,21 @@ $fontFamiliesText: Raleway;
 		justify-content: space-between;
 	}
 	&__fa-container.active {
-		background-color: #71f6eb;
+		background-color: $footerSocialBckgActive;
 		.active {
 			opacity: 0.95;
-			color: #000000;
+			color: $blackColor;
 			font-size: 24px;
 			font-weight: 400;
 		}
 	}
 	&__fa-container.active:hover {
-		background-color: #65ccc3;
+		background-color: $footerSocialBckgActiveHover;
 	}
 	&__fa-container {
 		width: 46px;
 		height: 40px;
-		background-color: rgb(141, 141, 141, 0.34);
+		background-color: $footerSocialBckg;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -623,7 +651,7 @@ $fontFamiliesText: Raleway;
 		}
 	}
 	&__fa-container:hover {
-		background-color: rgba(226, 226, 226, 0.34);
+		background-color: $footerSocialBckgHover;
 		cursor: pointer;
 		transition: 0.5s;
 	}
