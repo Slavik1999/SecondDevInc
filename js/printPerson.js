@@ -1,17 +1,11 @@
 function printPersons() {
-	teamRows.forEach((row, index) => {
-		row.innerHTML = fillRow(persons[index]);
-	});
-}
-
-function fillRow(personsRow) {
 	let row = '';
 
-	personsRow.map((person) => {
+	persons.map((person) => {
 		row += getTemplate(person);
 	});
 
-	return row;
+	teamRow.innerHTML = row;
 }
 
 function getTemplate(person) {
